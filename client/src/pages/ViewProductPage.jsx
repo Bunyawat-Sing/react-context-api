@@ -4,7 +4,7 @@ import { UserDataContext } from "../App";
 
 function ViewProductPage() {
   const navigate = useNavigate();
-  const context = useContext(UserDataContext);
+  const {level} = useContext(UserDataContext);
 
   return (
     <div>
@@ -15,7 +15,7 @@ function ViewProductPage() {
       </div>
 
       <div className="product-promotion-box">
-        <h2>คุณคือสมาชิกในระดับ {context.userData.level} ดังนั้นคุณได้สิทธิพิเศษลด 50%</h2>
+        <h2>คุณคือสมาชิกในระดับ {level} ดังนั้นคุณได้สิทธิพิเศษลด 50%</h2>
         <button onClick={() => alert("🥳🥳🥳🥳")}>กดรับสิทธิ</button>
       </div>
 

@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <UserDataContext.Provider value={{userData}}> {/*or user: userData and render {context.user.username} to AppHeader.jsx*/}
+      <UserDataContext.Provider value={userData}> {/*or {{user: userData}} and render {context.user.username} to AppHeader.jsx*/}
         <Router>
           <Routes>
             <Route path="/" element={<HomePage />} />
